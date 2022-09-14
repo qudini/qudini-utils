@@ -1,1 +1,1 @@
-# qudini-more-utils
+# qudini-utils

@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 11
+      - name: Cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+      - name: Version
+        run: |
+          mvn versions:set -DnewVersion=${GITHUB_REF/refs\/tags\/v/} -DgenerateBackupPoms=false -Prelease
+      - name: Release
+        run: |
+          export GPG_TTY=$(tty)
+          echo $GPG_PUBLIC_KEY | base64 --decode > gpg-public-key && gpg --import gpg-public-key
+          echo $GPG_PRIVATE_KEY | base64 --decode > gpg-private-key && gpg --batch --passphrase $GPG_PASSPHRASE --import gpg-private-key
+          mvn -B --settings ./.m2/settings.xml clean deploy -Dgpg.passphrase=$GPG_PASSPHRASE -Prelease
+        env:
+          LOG_LEVEL: FATAL
+          JIRA_ID: ${{ secrets.JIRA_ID }}
+          JIRA_PASSWORD: ${{ secrets.JIRA_PASSWORD }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+      - name: Clean
+        if: always()
+        run: |
+          export GPG_TTY=$(tty)
+          rm gpg-public-key || true
+          rm gpg-private-key || true
+          gpg --batch --yes --delete-secret-key $GPG_KEY_ID || true
+          gpg --batch --yes --delete-key $GPG_KEY_ID || true
+        env:
+          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}

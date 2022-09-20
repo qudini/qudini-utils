@@ -5,6 +5,10 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <name>Qudini Utils</name>
+    <description>Qudini Utilities</description>
+    <url>https://github.com/qudini/qudini-utils</url>
+
     <groupId>com.qudini</groupId>
     <artifactId>qudini-utils</artifactId>
     <version>0-SNAPSHOT</version>

@@ -19,6 +19,7 @@
         <lombok.version>1.18.24</lombok.version>
         <jackson.version>2.13.4</jackson.version>
         <reactor.version>3.4.23</reactor.version>
+        <bouncycastle.version>1.70</bouncycastle.version>
         <junit.version>5.9.0</junit.version>
         <assertj.version>3.23.1</assertj.version>
         <mockito.version>4.8.0</mockito.version>
@@ -202,6 +203,12 @@
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-core</artifactId>
             <version>${reactor.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcpkix-jdk15on</artifactId>
+            <version>${bouncycastle.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

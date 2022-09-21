@@ -243,3 +243,7 @@ Utilities around intervals such as enclosing/merging/subtracting.
 ### com.qudini.reactive.utils.MoreJackson
 
 - `#newObjectMapper()`: returns a new preconfigured `ObjectMapper`
+
+### com.qudini.reactive.utils.MoreRsa
+
+Utilities around RSA and OpenSSH.

@@ -1,4 +1,4 @@
-package com.qudini.utils.interval;
+package com.qudini.utils.intervals;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

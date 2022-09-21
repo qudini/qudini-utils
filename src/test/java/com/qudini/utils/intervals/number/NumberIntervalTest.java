@@ -1,11 +1,5 @@
-package com.qudini.utils.interval.number;
+package com.qudini.utils.intervals.number;
 
-import com.qudini.utils.intervals.number.ByteInterval;
-import com.qudini.utils.intervals.number.DoubleInterval;
-import com.qudini.utils.intervals.number.FloatInterval;
-import com.qudini.utils.intervals.number.IntInterval;
-import com.qudini.utils.intervals.number.LongInterval;
-import com.qudini.utils.intervals.number.ShortInterval;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;

@@ -1,6 +1,5 @@
-package com.qudini.utils.interval.temporal;
+package com.qudini.utils.intervals.temporal;
 
-import com.qudini.utils.intervals.temporal.InstantInterval;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;

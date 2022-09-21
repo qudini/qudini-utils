@@ -16,7 +16,7 @@
 
 ### com.qudini.reactive.utils.MoreMonos
 
-Utilities around monos.
+Utilities around monos. Needs [io.projectreactor:reactor-core](https://search.maven.org/artifact/io.projectreactor/reactor-core).
 
 ```java
 Mono<Optional<T>> example(Mono<T> mono) {
@@ -76,7 +76,7 @@ BiPredicate<T1, T2> example() {
 
 ### com.qudini.reactive.utils.MoreTuples
 
-Utilities around tuples.
+Utilities around tuples. Needs [io.projectreactor:reactor-core](https://search.maven.org/artifact/io.projectreactor/reactor-core).
 
 #### Building
 
@@ -242,8 +242,10 @@ Utilities around intervals such as enclosing/merging/subtracting.
 
 ### com.qudini.reactive.utils.MoreJackson
 
+Needs [com.fasterxml.jackson.core:jackson-databind](https://search.maven.org/artifact/com.fasterxml.jackson.core/jackson-databind).
+
 - `#newObjectMapper()`: returns a new preconfigured `ObjectMapper`
 
 ### com.qudini.reactive.utils.MoreRsa
 
-Utilities around RSA and OpenSSH.
+Utilities around RSA and OpenSSH. Needs [org.bouncycastle:bcpkix-jdk15on](https://search.maven.org/artifact/org.bouncycastle/bcpkix-jdk15on).

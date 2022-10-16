@@ -18,6 +18,7 @@
         <java.version>17</java.version>
         <lombok.version>1.18.24</lombok.version>
         <jackson.version>2.13.4</jackson.version>
+        <jackson-java8-modules.version>2.13.4</jackson-java8-modules.version>
         <reactor.version>3.4.23</reactor.version>
         <bouncycastle.version>1.70</bouncycastle.version>
         <junit.version>5.9.1</junit.version>
@@ -188,15 +189,21 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-parameter-names</artifactId>
+            <version>${jackson-java8-modules.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
-            <version>${jackson.version}</version>
+            <version>${jackson-java8-modules.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jdk8</artifactId>
-            <version>${jackson.version}</version>
+            <version>${jackson-java8-modules.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>

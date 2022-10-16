@@ -37,8 +37,7 @@ public interface Interval<E extends Comparable<? super E>, T extends Interval<E,
      * </ul>
      */
     default boolean overlaps(Interval<E, ?> o) {
-        return isGreaterThan(getStart(), o.getStart()) && isLessThan(getStart(), o.getEnd())
-                || isLessThan(getStart(), o.getStart()) && isGreaterThan(getEnd(), o.getStart());
+        return isLessThan(getStart(), o.getEnd()) && isGreaterThan(getEnd(), o.getStart());
     }
 
     /**

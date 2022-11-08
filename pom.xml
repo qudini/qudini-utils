@@ -19,7 +19,7 @@
         <lombok.version>1.18.24</lombok.version>
         <jackson.version>2.14.0</jackson.version>
         <jackson-java8-modules.version>2.13.4</jackson-java8-modules.version>
-        <reactor.version>3.4.24</reactor.version>
+        <reactor.version>3.5.0</reactor.version>
         <bouncycastle.version>1.70</bouncycastle.version>
         <junit.version>5.9.1</junit.version>
         <assertj.version>3.23.1</assertj.version>

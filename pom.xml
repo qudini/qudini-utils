@@ -18,7 +18,7 @@
         <java.version>17</java.version>
         <lombok.version>1.18.24</lombok.version>
         <jackson.version>2.14.0</jackson.version>
-        <jackson-java8-modules.version>2.14.0</jackson-java8-modules.version>
+        <jackson-java8-modules.version>2.18.0</jackson-java8-modules.version>
         <reactor.version>3.5.0</reactor.version>
         <bouncycastle.version>1.70</bouncycastle.version>
         <junit.version>5.9.1</junit.version>

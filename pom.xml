@@ -21,7 +21,7 @@
         <jackson-java8-modules.version>2.14.0</jackson-java8-modules.version>
         <reactor.version>3.5.0</reactor.version>
         <bouncycastle.version>1.70</bouncycastle.version>
-        <junit.version>5.9.1</junit.version>
+        <junit.version>5.11.3</junit.version>
         <assertj.version>3.23.1</assertj.version>
         <mockito.version>4.9.0</mockito.version>
         <compiler-plugin.version>3.10.1</compiler-plugin.version>
